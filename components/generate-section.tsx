@@ -81,25 +81,28 @@ const tools = [
 
 export function GenerateSection() {
   return (
-    <section className="px-6 py-8">
+    <section className="px-4 sm:px-6 py-4 sm:py-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-semibold text-foreground">Generate</h2>
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground">
+            Generate
+          </h2>
           <Button
             variant="ghost"
             className="text-blue-400 hover:text-blue-300 text-sm flex items-center font-bold"
           >
-           <ChevronDown className="block"/> <span className="block">Show all</span>
+            <ChevronDown className="block" />{" "}
+            <span className="block">Show all</span>
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {tools.map((tool, index) => (
             <Card
               key={index}
               className="bg-card border border-gray-100 dark:border-gray-900 p-2 hover:bg-accent transition-colors"
             >
-              <div className="flex gap-4">
+              <div className="flex gap-2 sm:gap-4">
                 <div className="flex items-center gap-2">
                   <div
                     className={`shrink-0 w-12 h-12 ${tool.iconBgColor} rounded-lg flex items-center justify-center text-lg text-gray-50`}
