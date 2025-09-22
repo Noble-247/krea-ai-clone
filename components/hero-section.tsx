@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className='px-4 sm:px-6 py-4 sm:py-8'>
-      <div className='flex flex-col md:flex-row gap-4 max-w-7xl mx-auto'>
+      <div className='flex flex-col md:flex-row gap-6 max-w-7xl mx-auto'>
         {/* WAN 2.2 Card */}
         <Card className="flex-1 bg-[url('/images/futuristic-ai-woman-1.jpg')] bg-cover via-pink-400 to-purple-500 border-0 overflow-hidden relative">
           <div className='absolute inset-0 bg-black/20' />
