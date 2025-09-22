@@ -35,7 +35,7 @@ export function HeroSection() {
                   <div className='flex justify-end'>
                     <Button
                       variant='default'
-                      className='bg-white border-white/20 text-black/70 hover:bg-white/20 hover:text-white'>
+                      className='bg-white border-white/20 text-black/70 hover:bg-white/20 hover:text-white cursor-pointer'>
                       Try WAN 2.2
                     </Button>
                   </div>
@@ -73,27 +73,27 @@ export function HeroSection() {
       {/* Navigation dots */}
       <div className='relative flex justify-center items-center mt-4 sm:mt-6 max-w-7xl mx-auto'>
         <div className='flex gap-3'>
-          <div className='w-2 h-2 bg-foreground rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
-          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full' />
+          <div className='w-2 h-2 bg-foreground rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
         </div>
         <div className='hidden absolute right-0 sm:flex gap-2'>
           <Button
             variant='ghost'
             size='sm'
-            className='text-muted-foreground hover:text-foreground'>
+            className='text-muted-foreground hover:text-foreground cursor-pointer'>
             <ChevronLeft className='w-4 h-4' />
           </Button>
           <Button
             variant='ghost'
             size='sm'
-            className='text-muted-foreground hover:text-foreground'>
-            <ChevronRight className='w-4 h-4' />
+            className='text-muted-foreground hover:text-foreground cursor-pointer'>
+            <ChevronRight className='w-4 h-4 ' />
           </Button>
         </div>
       </div>

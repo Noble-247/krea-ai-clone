@@ -15,6 +15,7 @@ import {
   Bell,
   Menu,
   X,
+  User,
 } from 'lucide-react';
 import { ThemeSwitcher } from './theme-switcher';
 
@@ -27,7 +28,7 @@ export function Header() {
         <div className='w-6 h-6 bg-foreground rounded flex items-center justify-center'>
           <span className='text-background text-sm font-bold'>K</span>
         </div>
-        <Avatar className='w-6 h-6 hidden sm:block'>
+        <Avatar className='w-6 h-6 hidden sm:block cursor-pointer'>
           <AvatarImage src='/placeholder.svg?height=24&width=24' />
           <AvatarFallback className='bg-purple-800 text-white text-xs'>
             U
@@ -43,43 +44,43 @@ export function Header() {
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <Home className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <Image className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <Video className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <PenOff className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <Eraser className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <PaintbrushVertical className='w-4 h-4' />
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hover:bg-background'>
+          className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
           <Folder className='w-4 h-4' />
         </Button>
       </div>
@@ -89,7 +90,7 @@ export function Header() {
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground'
+          className='text-muted-foreground cursor-pointer'
           aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMobileNavOpen((open) => !open)}>
           {mobileNavOpen ? (
@@ -111,25 +112,46 @@ export function Header() {
         style={{ willChange: 'opacity, transform' }}
         aria-hidden={!mobileNavOpen}>
         <div className='flex gap-2'>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <Home className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <Image className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <Video className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <PenOff className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <Eraser className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <PaintbrushVertical className='w-4 h-4' />
           </Button>
-          <Button variant='ghost' size='sm' className='text-muted-foreground'>
+          <Button
+            variant='ghost'
+            size='sm'
+            className='text-muted-foreground cursor-pointer'>
             <Folder className='w-4 h-4' />
           </Button>
         </div>
@@ -140,28 +162,28 @@ export function Header() {
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hidden sm:flex'>
+          className='text-muted-foreground hover:text-foreground hidden sm:flex cursor-pointer'>
           <Image className='w-4 h-4' />
           <span className='text-xs ml-1'>Gallery</span>
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground hidden sm:flex'>
+          className='text-muted-foreground hover:text-foreground hidden sm:flex cursor-pointer'>
           <Headphones className='w-4 h-4' />
           <span className='text-xs ml-1'>Support</span>
         </Button>
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground'>
+          className='text-muted-foreground hover:text-foreground cursor-pointer'>
           <Bell className='w-4 h-4' />
         </Button>
         <ThemeSwitcher />
-        <Avatar className='w-6 h-6'>
+        <Avatar className='w-6 h-6 cursor-pointer'>
           <AvatarImage src='/placeholder.svg?height=24&width=24' />
           <AvatarFallback className='bg-purple-800 text-white text-xs'>
-            U
+            <User />
           </AvatarFallback>
         </Avatar>
       </div>
