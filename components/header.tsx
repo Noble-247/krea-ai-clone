@@ -28,15 +28,18 @@ export function Header() {
         <div className='w-6 h-6 bg-foreground rounded flex items-center justify-center'>
           <span className='text-background text-sm font-bold'>K</span>
         </div>
-        <Avatar className='w-6 h-6 hidden sm:block cursor-pointer'>
-          <AvatarImage src='/placeholder.svg?height=24&width=24' />
-          <AvatarFallback className='bg-purple-800 text-white text-xs'>
-            U
-          </AvatarFallback>
-        </Avatar>
-        <span className='text-sm text-muted-foreground hidden sm:block'>
-          businesscontentcreator
-        </span>
+        {/* Remove the Avatar from mobile view */}
+        <div className='hidden sm:flex items-center gap-2'>
+          <Avatar className='w-6 h-6 cursor-pointer'>
+            <AvatarImage src='/placeholder.svg?height=24&width=24' />
+            <AvatarFallback className='bg-purple-800 text-white text-xs'>
+              U
+            </AvatarFallback>
+          </Avatar>
+          <span className='text-sm text-muted-foreground'>
+            businesscontentcreator
+          </span>
+        </div>
       </div>
 
       {/* Center - Navigation */}
@@ -85,77 +88,96 @@ export function Header() {
         </Button>
       </div>
 
-      {/* Mobile Navigation Hamburger */}
-      <div className='md:hidden flex items-center gap-1'>
-        <Button
-          variant='ghost'
-          size='sm'
-          className='text-muted-foreground cursor-pointer'
-          aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setMobileNavOpen((open) => !open)}>
-          {mobileNavOpen ? (
-            <X className='w-5 h-5' />
-          ) : (
-            <Menu className='w-5 h-5' />
-          )}
-        </Button>
-      </div>
-
-      {/* Mobile Navigation Icons (collapsible, animated) */}
+      {/* Mobile Navigation Side Panel */}
       <div
-        className={`absolute top-full left-0 w-full bg-background border-b border-border flex flex-col items-center gap-1 py-2 z-20 md:hidden transition-all duration-300 ease-in-out
-        ${
-          mobileNavOpen
-            ? 'opacity-100 scale-100 pointer-events-auto translate-y-0'
-            : 'opacity-0 scale-95 pointer-events-none -translate-y-2'
-        }`}
-        style={{ willChange: 'opacity, transform' }}
-        aria-hidden={!mobileNavOpen}>
-        <div className='flex gap-2'>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <Home className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <Image className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <Video className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <PenOff className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <Eraser className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <PaintbrushVertical className='w-4 h-4' />
-          </Button>
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-muted-foreground cursor-pointer'>
-            <Folder className='w-4 h-4' />
-          </Button>
+        className={`fixed inset-y-0 right-0 w-64 bg-background border-l border-border z-30 md:hidden transition-transform duration-300 ease-in-out ${
+          mobileNavOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+        <div className='flex flex-col h-full'>
+          {/* Header with close button */}
+          <div className='p-4 border-b border-border flex items-center justify-between'>
+            <span className='font-medium'>Menu</span>
+            <Button
+              variant='ghost'
+              size='sm'
+              onClick={() => setMobileNavOpen(false)}
+              className='hover:bg-muted'>
+              <X className='w-5 h-5' />
+            </Button>
+          </div>
+
+          {/* Content wrapper */}
+          <div className='p-4 flex flex-col h-full'>
+            {/* User Profile Section */}
+            <div className='flex items-center gap-3 pb-4 border-b border-border'>
+              <Avatar className='w-10 h-10'>
+                <AvatarImage src='/placeholder.svg?height=40&width=40' />
+                <AvatarFallback className='bg-purple-800 text-white'>
+                  <User />
+                </AvatarFallback>
+              </Avatar>
+              <div className='flex flex-col'>
+                <span className='text-sm font-medium'>My Account</span>
+                <span className='text-xs text-muted-foreground'>
+                  View Profile
+                </span>
+              </div>
+            </div>
+
+            {/* Navigation Items */}
+            <nav className='flex flex-col gap-2 py-4'>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Home className='w-4 h-4 mr-3' />
+                Home
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Image className='w-4 h-4 mr-3' />
+                Images
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Video className='w-4 h-4 mr-3' />
+                Videos
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <PenOff className='w-4 h-4 mr-3' />
+                Inpainting
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Eraser className='w-4 h-4 mr-3' />
+                Erase
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <PaintbrushVertical className='w-4 h-4 mr-3' />
+                Paint
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Folder className='w-4 h-4 mr-3' />
+                Files
+              </Button>
+            </nav>
+
+            {/* Bottom Actions */}
+            <div className='mt-auto border-t border-border pt-4 flex flex-col gap-2'>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Bell className='w-4 h-4 mr-3' />
+                Notifications
+              </Button>
+              <Button variant='ghost' className='justify-start w-full'>
+                <Headphones className='w-4 h-4 mr-3' />
+                Support
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Overlay for mobile menu */}
+      {mobileNavOpen && (
+        <div
+          className='fixed inset-0 bg-background/80 backdrop-blur-sm z-20 md:hidden'
+          onClick={() => setMobileNavOpen(false)}
+        />
+      )}
 
       {/* Right side - User actions */}
       <div className='flex items-center gap-2'>
@@ -176,16 +198,25 @@ export function Header() {
         <Button
           variant='ghost'
           size='sm'
-          className='text-muted-foreground hover:text-foreground cursor-pointer'>
+          className='text-muted-foreground hover:text-foreground cursor-pointer hidden md:flex'>
           <Bell className='w-4 h-4' />
         </Button>
         <ThemeSwitcher />
-        <Avatar className='w-6 h-6 cursor-pointer'>
+        <Avatar className='w-6 h-6 cursor-pointer hidden md:block'>
           <AvatarImage src='/placeholder.svg?height=24&width=24' />
           <AvatarFallback className='bg-purple-800 text-white text-xs'>
             <User />
           </AvatarFallback>
         </Avatar>
+        {/* Add Menu Button for mobile */}
+        <Button
+          variant='ghost'
+          size='sm'
+          className='text-muted-foreground cursor-pointer md:hidden'
+          aria-label='Open menu'
+          onClick={() => setMobileNavOpen(true)}>
+          <Menu className='w-5 h-5' />
+        </Button>
       </div>
     </header>
   );
