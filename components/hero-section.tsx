@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className='px-2 sm:px-6 py-2 sm:py-8'>
-      <div className='flex flex-col md:flex-row gap-3 sm:gap-6 max-w-[95%] mx-auto'>
+      <div className='flex flex-col lg:flex-row gap-3 sm:gap-6 max-w-[95%] mx-auto'>
         <div className='flex-2'>
           {/* WAN 2.2 Card */}
           <Card className="bg-[url('/images/futuristic-ai-woman-1.jpg')] bg-cover bg-center border-0 overflow-hidden relative min-h-[300px] sm:min-h-[400px]">
@@ -20,15 +20,15 @@ export function HeroSection() {
                 FEATURED MODEL
               </div>
               <div className='flex flex-col h-full justify-between'>
-                <h2 className='text-2xl sm:text-5xl font-bold text-white mb-2 text-center mt-4 sm:mt-10'>
+                <h2 className='text-3xl sm:text-5xl font-bold text-white mb-2 text-center mt-6 sm:mt-10'>
                   WAN 2.2
                 </h2>
                 <div className='flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-6 text-center sm:text-left'>
                   <div>
-                    <h3 className='text-lg sm:text-xl text-white mb-2 sm:mb-4'>
+                    <h3 className='text-lg mt-8 sm:mt-12 sm:text-2xl text-white mb-2 sm:mb-4'>
                       WAN 2.2 Image generation
                     </h3>
-                    <p className='text-white/90 text-xs sm:text-sm max-w-sm leading-relaxed'>
+                    <p className='text-white/90 text-sm sm:text-base max-w-sm leading-relaxed'>
                       Generate complex images with this brand new and powerful
                       WAN 2.2 model. Exceptional prompt adherence and
                       ultra-realistic results.
@@ -37,7 +37,7 @@ export function HeroSection() {
                   <div className='w-full sm:w-auto'>
                     <Button
                       variant='default'
-                      className='w-auto bg-white border-white/20 text-black/70 hover:bg-white/20 hover:text-white cursor-pointer'>
+                      className='w-auto bg-white border-white/20 text-black/70 hover:bg-white/20 hover:text-white cursor-pointer rounded-full'>
                       Try WAN 2.2
                     </Button>
                   </div>
@@ -46,15 +46,91 @@ export function HeroSection() {
             </div>
           </Card>
           {/* Navigation Dots */}
-          <div className='flex gap-2 sm:gap-3 mt-3 sm:mt-6'>
-            <div className='w-2 h-2 bg-foreground rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
-            <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+          <div className='flex gap-1 mt-3 sm:mt-6 justify-center lg:justify-end'>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-foreground rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <div className='w-2 h-2 bg-muted-foreground/50 rounded-full cursor-pointer' />
+            </Button>
           </div>
         </div>
 
@@ -67,16 +143,16 @@ export function HeroSection() {
                 OS MODEL
               </div>
               <div className='flex flex-col h-full justify-between text-center sm:text-left'>
-                <h2 className='text-2xl sm:text-5xl font-bold text-white mb-2 text-center mt-4 sm:mt-10'>
-                  Open Sour
+                <h2 className='text-3xl sm:text-5xl font-bold text-white mb-2 text-center mt-6 sm:mt-10'>
+                  Open Source
                 </h2>
                 <div>
-                  <h3 className='text-lg sm:text-xl text-white mb-2 sm:mb-4'>
+                  <h3 className='text-lg mt-8 sm:mt-12 sm:text-2xl text-white mb-2 sm:mb-4'>
                     FLUX1 Krea
                   </h3>
-                  <p className='text-white/90 text-xs sm:text-sm max-w-sm leading-relaxed'>
-                    We're most proud to present our FLUX1 Krea model which
-                    Source. Download and run our model anytime, read the
+                  <p className='text-white/90 text-sm sm:text-base max-w-sm leading-relaxed'>
+                    We're most proud to present our FLUX1 Krea model which is
+                    open source. Download and run our model anytime, read the
                     technical report or contribute to the community.
                   </p>
                 </div>
@@ -84,18 +160,18 @@ export function HeroSection() {
             </div>
           </Card>
           {/* Navigation Arrows */}
-          <div className='flex gap-1 sm:gap-2 mt-2 sm:mt-6 justify-end'>
+          <div className='flex gap-1 sm:gap-2 mt-2 sm:mt-6  justify-center lg:justify-end'>
             <Button
               variant='ghost'
               size='sm'
-              className='h-8 w-8 sm:h-9 sm:w-9 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
-              <ChevronLeft className='w-4 h-4' />
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <ChevronLeft className='w-3 h-3' />
             </Button>
             <Button
               variant='ghost'
               size='sm'
-              className='h-8 w-8 sm:h-9 sm:w-9 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
-              <ChevronRight className='w-4 h-4 ' />
+              className='h-4 w-4 sm:h-5 sm:w-5 p-0 text-muted-foreground hover:text-foreground cursor-pointer'>
+              <ChevronRight className='w-3 h-3 ' />
             </Button>
           </div>
         </div>

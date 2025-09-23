@@ -17,7 +17,7 @@ const tools = [
     name: 'Image',
     description: 'Generate images with custom styles in Flux and Ideogram',
     icon: <Image />,
-    badge: 'NEW',
+    badge: 'New',
     badgeColor: 'bg-blue-500',
     iconBgColor: 'bg-gray-600',
   },
@@ -41,7 +41,7 @@ const tools = [
     name: 'Enhancer',
     description: 'Upgrade and enhance images and videos up to 22k',
     icon: <Sparkles />,
-    badge: 'NEW',
+    badge: 'New',
     badgeColor: 'bg-blue-500',
     iconBgColor: 'bg-gray-700',
   },
@@ -49,7 +49,7 @@ const tools = [
     name: 'Edit',
     description: 'Add objects, change styles, or expand photos and generators',
     icon: <Pencil />,
-    badge: 'NEW',
+    badge: 'New',
     badgeColor: 'bg-blue-500',
     iconBgColor: 'bg-purple-950',
   },
@@ -57,7 +57,7 @@ const tools = [
     name: 'Video Lipsync',
     description: 'Lipsync any video to any audio',
     icon: <MicVocal />,
-    badge: 'NEW',
+    badge: 'New',
     badgeColor: 'bg-blue-500',
     iconBgColor: 'bg-gray-600',
   },
@@ -65,7 +65,7 @@ const tools = [
     name: 'Motion Transfer',
     description: 'Transfer motion to images and animate characters',
     icon: <PersonStanding />,
-    badge: 'NEW',
+    badge: 'New',
     badgeColor: 'bg-blue-500',
     iconBgColor: 'bg-gray-800',
   },
@@ -108,12 +108,12 @@ export function GenerateSection() {
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-start justify-between gap-2 mb-1'>
                     <div className='flex flex-wrap items-center gap-2'>
-                      <h3 className='font-medium text-sm text-foreground'>
+                      <h3 className='font-bold text-sm text-foreground'>
                         {tool.name}
                       </h3>
                       {tool.badge && (
                         <span
-                          className={`px-1.5 py-0.5 text-[10px] sm:text-xs font-medium text-white rounded ${tool.badgeColor}`}>
+                          className={`px-1 py-0.5 text-xs lg:text-sm font-medium text-white rounded-lg ${tool.badgeColor}`}>
                           {tool.badge}
                         </span>
                       )}
@@ -125,7 +125,7 @@ export function GenerateSection() {
                       Open
                     </Button>
                   </div>
-                  <p className='text-xs text-muted-foreground leading-relaxed line-clamp-2'>
+                  <p className='text-sm text-muted-foreground leading-relaxed line-clamp-2'>
                     {tool.description}
                   </p>
                 </div>
