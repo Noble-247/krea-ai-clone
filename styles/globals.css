@@ -1,7 +1,17 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+.bg-featured {
+  background-image: url('/images/futuristic-ai-woman-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-os {
+  background-image: url('/images/premium-ai-whiskey.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 :root {
   --background: oklch(1 0 0);
