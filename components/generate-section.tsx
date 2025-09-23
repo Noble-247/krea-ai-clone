@@ -81,8 +81,8 @@ const tools = [
 
 export function GenerateSection() {
   return (
-    <section className='px-4 sm:px-6 py-4 sm:py-8'>
-      <div className='max-w-7xl mx-auto'>
+    <section className='sm:px-6 py-4 sm:py-8'>
+      <div className='max-w-[95%] mx-auto'>
         <div className='flex items-center justify-between mb-4 sm:mb-6'>
           <h2 className='text-xl sm:text-2xl font-semibold text-foreground'>
             Generate
@@ -99,7 +99,7 @@ export function GenerateSection() {
           {tools.map((tool, index) => (
             <Card
               key={index}
-              className='bg-card border border-gray-100 dark:border-gray-900 p-2 hover:bg-accent transition-colors'>
+              className='bg-card border border-gray-100 dark:border-gray-900 hover:bg-accent transition-colors'>
               <div className='flex gap-2 sm:gap-4'>
                 <div className='flex items-center gap-2'>
                   <div

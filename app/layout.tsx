@@ -10,7 +10,6 @@ import '../styles/globals.css';
 export const metadata: Metadata = {
   title: 'Krea AI - AI Model Platform',
   description: 'Generate images, videos, and more with AI models',
-  generator: 'v0.app',
 };
 
 export default function RootLayout({

@@ -22,7 +22,7 @@ import { ThemeSwitcher } from './theme-switcher';
 export function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   return (
-    <header className='flex items-center justify-between px-2 sm:px-4 py-3 bg-background border-b border-border relative'>
+    <header className='flex items-center justify-between px-2 sm:px-4 py-3 bg-background relative'>
       {/* Left side - Logo */}
       <div className='flex items-center gap-2'>
         <div className='w-6 h-6 bg-foreground rounded flex items-center justify-center'>
