@@ -81,56 +81,54 @@ const tools = [
 
 export function GenerateSection() {
   return (
-    <section className='sm:px-6 py-4 sm:py-8'>
+    <section className='px-4 sm:px-6 py-4 sm:py-8'>
       <div className='max-w-[95%] mx-auto'>
         <div className='flex items-center justify-between mb-4 sm:mb-6'>
-          <h2 className='text-xl sm:text-2xl font-semibold text-foreground'>
+          <h2 className='text-lg sm:text-xl md:text-2xl font-semibold text-foreground'>
             Generate
           </h2>
           <Button
             variant='ghost'
-            className='text-blue-400 hover:text-blue-300 text-sm flex items-center font-bold'>
-            <ChevronDown className='block' />{' '}
-            <span className='block'>Show all</span>
+            className='text-blue-400 hover:text-blue-300 text-xs sm:text-sm flex items-center gap-1 font-bold'>
+            <ChevronDown className='w-4 h-4' />
+            <span>Show all</span>
           </Button>
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4'>
           {tools.map((tool, index) => (
             <Card
               key={index}
-              className='bg-card border border-gray-100 dark:border-gray-900 hover:bg-accent transition-colors'>
-              <div className='flex gap-2 sm:gap-4'>
-                <div className='flex items-center gap-2'>
-                  <div
-                    className={`shrink-0 w-12 h-12 ${tool.iconBgColor} rounded-lg flex items-center justify-center text-lg text-gray-50`}>
-                    {tool.icon}
-                  </div>
-                  <div className='flex-1 min-w-0'>
-                    <div className='flex items-center justify-between mb-1'>
-                      <div className='flex items-center gap-2'>
-                        <h3 className='font-medium text-sm text-foreground'>
-                          {tool.name}
-                        </h3>
-                        {tool.badge && (
-                          <span
-                            className={`px-2 py-0.5 text-xs font-medium text-white rounded ${tool.badgeColor}`}>
-                            {tool.badge}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <p className='text-xs text-muted-foreground leading-relaxed line-clamp-2'>
-                      {tool.description}
-                    </p>
-                  </div>
+              className='bg-card border border-gray-100 dark:border-gray-900 hover:bg-accent transition-colors p-3 sm:p-4'>
+              <div className='flex items-start gap-3 sm:gap-4'>
+                <div
+                  className={`shrink-0 w-10 h-10 sm:w-12 sm:h-12 ${tool.iconBgColor} rounded-lg flex items-center justify-center text-base sm:text-lg text-gray-50`}>
+                  {tool.icon}
                 </div>
-                <Button
-                  variant='outline'
-                  size='sm'
-                  className='text-xs bg-transparent cursor-pointer hover:bg-accent hover:text-foreground ml-auto flex-shrink-0'>
-                  Open
-                </Button>
+                <div className='flex-1 min-w-0'>
+                  <div className='flex items-start justify-between gap-2 mb-1'>
+                    <div className='flex flex-wrap items-center gap-2'>
+                      <h3 className='font-medium text-sm text-foreground'>
+                        {tool.name}
+                      </h3>
+                      {tool.badge && (
+                        <span
+                          className={`px-1.5 py-0.5 text-[10px] sm:text-xs font-medium text-white rounded ${tool.badgeColor}`}>
+                          {tool.badge}
+                        </span>
+                      )}
+                    </div>
+                    <Button
+                      variant='outline'
+                      size='sm'
+                      className='h-7 px-2 text-xs bg-transparent cursor-pointer hover:bg-accent hover:text-foreground'>
+                      Open
+                    </Button>
+                  </div>
+                  <p className='text-xs text-muted-foreground leading-relaxed line-clamp-2'>
+                    {tool.description}
+                  </p>
+                </div>
               </div>
             </Card>
           ))}
