@@ -108,12 +108,12 @@ export function GenerateSection() {
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-start justify-between gap-2 mb-1'>
                     <div className='flex flex-wrap items-center gap-2'>
-                      <h3 className='font-bold text-sm text-foreground'>
+                      <h3 className='font-bold text-xs text-foreground'>
                         {tool.name}
                       </h3>
                       {tool.badge && (
                         <span
-                          className={`px-1 py-0.5 text-xs lg:text-sm font-medium text-white rounded-lg ${tool.badgeColor}`}>
+                          className={`px-1 py-0.5 text-xs text-white rounded-lg ${tool.badgeColor}`}>
                           {tool.badge}
                         </span>
                       )}
@@ -121,11 +121,11 @@ export function GenerateSection() {
                     <Button
                       variant='outline'
                       size='sm'
-                      className='h-7 px-2 text-xs bg-transparent cursor-pointer hover:bg-accent hover:text-foreground'>
+                      className='h-5 px-2 rounded-full text-xs bg-transparent cursor-pointer hover:bg-accent hover:text-foreground'>
                       Open
                     </Button>
                   </div>
-                  <p className='text-sm text-muted-foreground leading-relaxed line-clamp-2'>
+                  <p className='text-xs text-muted-foreground line-clamp-2'>
                     {tool.description}
                   </p>
                 </div>
