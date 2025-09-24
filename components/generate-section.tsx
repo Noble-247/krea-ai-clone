@@ -84,7 +84,7 @@ export function GenerateSection() {
     <section className='px-4 sm:px-6 py-4 sm:py-8'>
       <div className='max-w-[95%] mx-auto'>
         <div className='flex items-center justify-between mb-4 sm:mb-6'>
-          <h2 className='text-lg sm:text-xl md:text-2xl font-semibold text-foreground'>
+          <h2 className='text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground'>
             Generate
           </h2>
           <Button
@@ -99,7 +99,7 @@ export function GenerateSection() {
           {tools.map((tool, index) => (
             <Card
               key={index}
-              className='bg-card border border-gray-100 dark:border-gray-900 hover:bg-accent transition-colors p-3 sm:p-4'>
+              className='bg-card border dark:border-gray-700 hover:bg-accent transition-colors p-3 sm:p-4'>
               <div className='flex items-start gap-3 sm:gap-4'>
                 <div
                   className={`shrink-0 w-10 h-10 sm:w-12 sm:h-12 ${tool.iconBgColor} rounded-lg flex items-center justify-center text-base sm:text-lg text-gray-50`}>

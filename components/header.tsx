@@ -26,16 +26,16 @@ export function Header() {
       {/* Left side - Logo */}
       <div className='flex items-center gap-2'>
         <div className='w-6 h-6 bg-foreground rounded flex items-center justify-center'>
-          <span className='text-background text-sm font-bold'>K</span>
+          <span className='text-background text-lg font-bold'>K</span>
         </div>
         {/* Remove the Avatar from mobile view */}
         <div className='hidden sm:flex items-center gap-2'>
-          <Avatar className='w-6 h-6 cursor-pointer'>
-            <AvatarImage src='/placeholder.svg?height=24&width=24' />
-            <AvatarFallback className='bg-purple-800 text-white text-xs'>
-              U
-            </AvatarFallback>
-          </Avatar>
+           <Avatar className='w-10 h-10'>
+                <AvatarImage src='/placeholder-user.jpg?height=40&width=40' />
+                <AvatarFallback className='bg-purple-800 text-white'>
+                  <User />
+                </AvatarFallback>
+              </Avatar>
           <span className='text-sm text-muted-foreground'>
             businesscontentcreator
           </span>
@@ -46,45 +46,45 @@ export function Header() {
       <div className='hidden md:flex items-center gap-1 border border-border rounded-3xl px-2 py-1 bg-muted shadow-sm'>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <Home className='w-4 h-4' />
+          <Home className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <Image className='w-4 h-4' />
+          <Image className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <Video className='w-4 h-4' />
+          <Video className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <PenOff className='w-4 h-4' />
+          <PenOff className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <Eraser className='w-4 h-4' />
+          <Eraser className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <PaintbrushVertical className='w-4 h-4' />
+          <PaintbrushVertical className='w-6 h-6' />
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hover:bg-background cursor-pointer'>
-          <Folder className='w-4 h-4' />
+          <Folder className='w-6 h-6' />
         </Button>
       </div>
 
@@ -111,7 +111,7 @@ export function Header() {
             {/* User Profile Section */}
             <div className='flex items-center gap-3 pb-4 border-b border-border'>
               <Avatar className='w-10 h-10'>
-                <AvatarImage src='/placeholder.svg?height=40&width=40' />
+                <AvatarImage src='/placeholder-user.jpg?height=40&width=40' />
                 <AvatarFallback className='bg-purple-800 text-white'>
                   <User />
                 </AvatarFallback>
@@ -183,39 +183,39 @@ export function Header() {
       <div className='flex items-center gap-2'>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hidden sm:flex cursor-pointer'>
-          <Image className='w-4 h-4' />
-          <span className='text-xs ml-1'>Gallery</span>
+          <Image className='w-6 h-6' />
+          <span className='text-sm ml-1'>Gallery</span>
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground hidden sm:flex cursor-pointer'>
-          <Headphones className='w-4 h-4' />
-          <span className='text-xs ml-1'>Support</span>
+          <Headphones className='w-6 h-6' />
+          <span className='text-sm ml-1'>Support</span>
         </Button>
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground hover:text-foreground cursor-pointer hidden md:flex'>
-          <Bell className='w-4 h-4' />
+          <Bell className='w-6 h-6' />
         </Button>
         <ThemeSwitcher />
         <Avatar className='w-6 h-6 cursor-pointer hidden md:block'>
-          <AvatarImage src='/placeholder.svg?height=24&width=24' />
-          <AvatarFallback className='bg-purple-800 text-white text-xs'>
+          <AvatarImage src='/placeholder-user.jpg?height=24&width=24' />
+          <AvatarFallback className='bg-purple-800 text-white text-sm'>
             <User />
           </AvatarFallback>
         </Avatar>
         {/* Add Menu Button for mobile */}
         <Button
           variant='ghost'
-          size='sm'
+          size='lg'
           className='text-muted-foreground cursor-pointer md:hidden'
           aria-label='Open menu'
           onClick={() => setMobileNavOpen(true)}>
-          <Menu className='w-5 h-5' />
+          <Menu className='w-6 h-6' />
         </Button>
       </div>
     </header>

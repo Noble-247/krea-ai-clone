@@ -3,7 +3,7 @@ import React from 'react';
 
 export function Gallery() {
   return (
-    <section className='relative flex justify-between items-center mt-4 sm:mt-6 max-w-[95%] mx-auto font-bold py-5 px-4'>
+    <section className='relative flex justify-between items-center mt-4 sm:mt-6 max-w-[95%] mx-auto font-bold py-5 px-4 text-muted-foreground'>
       <div className='text-xl pl-1'>Gallery</div>
       <div className='flex space-x-4 text-md'>
         <div className='flex items-center gap-1'>
