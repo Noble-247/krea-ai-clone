@@ -24,14 +24,14 @@ export function ThemeSwitcher() {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className='relative text-muted-foreground hover:text-foreground cursor-pointer mr-0.5 lg:mr-6'>
       <Sun
-        className={`absolute h-6 w-6 transition-all duration-300 ease-in-out ${
+        className={`absolute h-8 w-8 transition-all duration-300 ease-in-out ${
           isDark
             ? 'opacity-100 rotate-0 scale-100'
             : 'opacity-0 -rotate-90 scale-0'
         }`}
       />
       <Moon
-        className={`absolute h-6 w-6 transition-all duration-300 ease-in-out ${
+        className={`absolute h-8 w-8 transition-all duration-300 ease-in-out ${
           isDark
             ? 'opacity-0 rotate-90 scale-0'
             : 'opacity-100 rotate-0 scale-100'
